@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-script-url" content="">
+    <meta name="admin-password-hash" content="6051fc84a7a0d74c225fb18a496b09952da5642e60723ecae543298edd7d82d6">
+    <title>Survey – Human–AI Collaboration in Enterprise (EN – After)</title>
+    <script>
+    window.SURVEY_CONFIG = {
+        storageKey:    'survey_ai_collab_en_after',
+        spreadsheetId: '',
+        orgBadge:        'VIN UNIVERSITY – RMIT VIETNAM',
+        headerTitle:     'SURVEY ON HUMAN–AI COLLABORATION IN ENTERPRISE',
+        headerDetail:    'Survey on Human–AI Collaboration in the Organizational and Business Environment',
+        headerSubtitle:  'We are a research team from VinUniversity and RMIT University Vietnam. Please complete the questionnaire below. Your responses are extremely valuable to us.',
+        banner:          'human-and-AI-collaboration_EDIT.JPG',
+        showEmail:                true,
+        requireEmail:             true,
+        emailLabel:               'Email:',
+        emailPlaceholder:         'example@email.com',
+        showCompanyName:          true,
+        requireCompanyName:       true,
+        companyNameLabel:         'Company / Organization Name:',
+        companyNamePlaceholder:   'Enter your company or organization name...',
+        dateLabel:                'Survey Date:',
+        showDate:                 true,
+        showCustomQuestionsAdmin: true,
+        requireConsent:           true,
+        requiredMessage:          'Please answer all required questions.',
+        submitLabel:   '✓  Submit Survey',
+        thankYouTitle: 'THANK YOU VERY MUCH!',
+        thankYouBody:  'Your response has been recorded successfully.<br>Data will be used exclusively for research purposes.',
+        introBox: {
+            title: 'PART I: RESEARCH INTRODUCTION AND CONTEXT',
+            html: `<p><strong>(A) Introduction</strong></p>
+<p>Dear Sir/Madam,</p>
+<p>We are a research team from <strong>VinUniversity and RMIT University Vietnam</strong>, currently conducting an academic study on <strong>Human–AI Collaboration</strong> within organizational and business environments.</p>
+<p>This study aims to explore how employees and organizations are adopting AI technologies in their daily work practices, as well as how humans interact, collaborate, and make decisions alongside AI in the context of rapid digital transformation and technological advancement. The research is expected to provide practical insights into the role of AI in modern organizations and support businesses in developing more effective AI adoption and collaboration strategies.</p>
+<p>Your participation will provide valuable practical insights for academic research and contribute to a better understanding of the evolving collaboration between humans and AI in contemporary organizations. We will also share the research findings if you are interested.</p>
+<p><strong>(B) Confidentiality and Commitment</strong></p>
+<p>This survey is conducted solely for academic purposes. There are no right or wrong answers. We kindly ask you to respond based on your actual experiences and personal perceptions in the workplace. All information collected will be kept confidential and used exclusively for research purposes. Survey data will be analyzed in aggregate form only, and no personally identifiable information will be disclosed.</p>
+<p>We sincerely appreciate your valuable time, participation, and support in this research.</p>
+<p>Any feedback or question, please contact Prof. Hong Bui at <a href="mailto:Hong.btm@vinuni.edu.vn">Hong.btm@vinuni.edu.vn</a></p>`
+        },
+        sections: [
+            {type:'demographics',id:'info',sectionLabel:'PART II',title:'BASIC INFORMATION',
+             questions:[
+              {id:'q_info_1',required:true,text:'What is your gender?',type:'radio',layout:3,
+               options:[{value:'Male',label:'Male'},{value:'Female',label:'Female'},{value:'Other',label:'Other'}]},
+              {id:'q_info_2',required:true,text:'What is your age?',type:'number',min:18,step:1,placeholder:'e.g. 25 (minimum 18)'},
+              {id:'q_info_3',required:true,text:'What is your current position in the organization?',type:'radio',layout:3,
+               options:[
+                {value:'Chief Executive Officer (CEO)',label:'Chief Executive Officer (CEO)'},
+                {value:'Chief Financial Officer (CFO)',label:'Chief Financial Officer (CFO)'},
+                {value:'Chief Technology Officer (CTO)',label:'Chief Technology Officer (CTO)'},
+                {value:'Chief Marketing Officer (CMO)',label:'Chief Marketing Officer (CMO)'},
+                {value:'Chief Human Resources Officer (CHRO)',label:'Chief Human Resources Officer (CHRO)'},
+                {value:'Chief Information Officer (CIO)',label:'Chief Information Officer (CIO)'},
+                {value:'Head of Department / Manager',label:'Head of Department / Manager'},
+                {value:'Employee',label:'Employee'},
+                {value:'Other',label:'Other:'}],
+               otherField:{name:'q_info_3_other',placeholder:'Please specify...'}},
+              {id:'q_info_4',required:true,text:'What are the main areas of activity of the business/organization where you are working?',type:'radio',layout:2,
+               options:[
+                {value:'Logistics / Supply Chain Management',label:'Logistics / Supply Chain Management'},
+                {value:'Manufacturing and Industry',label:'Manufacturing and Industry'},
+                {value:'Information Technology and Telecommunications',label:'Information Technology and Telecommunications'},
+                {value:'Retail and Consumer Goods',label:'Retail and Consumer Goods'},
+                {value:'Finance and Banking',label:'Finance and Banking'},
+                {value:'Education',label:'Education'},
+                {value:'Healthcare and Pharmaceuticals',label:'Healthcare and Pharmaceuticals'},
+                {value:'Building / Construction',label:'Building / Construction'},
+                {value:'Other',label:'Other:'}],
+               otherField:{name:'q_info_4_other',placeholder:'Please specify...'}},
+              {id:'q_info_5',required:true,text:'How many employees does your business have?',type:'radio',layout:2,
+               options:[
+                {value:'1 - 49 employees',label:'1 – 49 employees'},
+                {value:'50 - 249 employees',label:'50 – 249 employees'},
+                {value:'250 - 999 employees',label:'250 – 999 employees'},
+                {value:'1000+ employees',label:'1000+ employees'}]},
+              {id:'q_info_6',required:true,text:'How much annual revenue does your business have?',type:'radio',layout:2,
+               options:[
+                {value:'Less than 3 billion VND',label:'Less than 3 billion VND'},
+                {value:'From 3 billion to 50 billion VND',label:'From 3 billion to 50 billion VND'},
+                {value:'From 50 billion to 300 billion VND',label:'From 50 billion to 300 billion VND'},
+                {value:'Over 300 billion VND',label:'Over 300 billion VND'},
+                {value:'Other',label:'Other:'}],
+               otherField:{name:'q_info_6_other',placeholder:'Please specify...'}},
+              {id:'q_info_7',required:true,text:'How many years has your business been in operation?',type:'number',min:1,step:1,placeholder:'e.g. 5 (years)'},
+              {id:'q_info_8',required:true,text:'How long have you been with your current organization?',type:'number',min:1,step:1,placeholder:'e.g. 3 (years)'},
+              {id:'q_info_9',required:true,text:'To what extent is your business/organization currently applying AI?',type:'radio',layout:'column',
+               options:[
+                {value:'AI not yet used',label:'AI not yet used'},
+                {value:'Testing AI on a small scale',label:'Testing AI on a small scale'},
+                {value:'Using AI in several departments/functions',label:'Using AI in several departments/functions'},
+                {value:'Widespread use of AI across the enterprise',label:'Widespread use of AI across the enterprise'},
+                {value:'AI has been deeply integrated into operational and decision-making processes',label:'AI has been deeply integrated into operational and decision-making processes'}]},
+              {id:'q_info_10',required:false,text:'In which fields or activities does your business/organization mainly apply AI? (Multiple answers can be selected)',type:'checkbox',layout:2,
+               checkboxNote:'Multiple answers can be selected',
+               options:[
+                {value:'Data analysis and reporting',label:'Data analysis and reporting'},
+                {value:'Workflow automation',label:'Workflow automation'},
+                {value:'Customer Care',label:'Customer Care'},
+                {value:'Marketing and content creation',label:'Marketing and content creation'},
+                {value:'Logistics and Supply Chain',label:'Logistics and Supply Chain'},
+                {value:'Human Resource Management',label:'Human Resource Management'},
+                {value:'Management Decision Making Support',label:'Management Decision Making Support'},
+                {value:'Research and development (R&D)',label:'Research and development (R&D)'},
+                {value:'Quality Control / Operations',label:'Quality Control / Operations'},
+                {value:'Other',label:'Other:'}],
+               otherField:{name:'q_info_10_other',placeholder:'Please specify...'}},
+              {id:'q_info_11',required:true,text:'How long have you been using AI tools?',type:'number',min:1,step:1,placeholder:'e.g. 2 (years)'},
+              {id:'q_info_12',required:false,text:'What AI tools do you often use at work? (Multiple answers can be selected)',type:'checkbox',layout:3,
+               checkboxNote:'Multiple answers can be selected',
+               options:[
+                {value:'ChatGPT',label:'ChatGPT'},
+                {value:'Gemini',label:'Gemini'},
+                {value:'Claude',label:'Claude'},
+                {value:'Microsoft Copilot',label:'Microsoft Copilot'},
+                {value:'Grammarly AI',label:'Grammarly AI'},
+                {value:'Notion AI',label:'Notion AI'},
+                {value:'GitHub Copilot',label:'GitHub Copilot'},
+                {value:'Canva AI',label:'Canva AI'},
+                {value:'Midjourney / DALL·E',label:'Midjourney / DALL·E'},
+                {value:'Enterprise in-house AI',label:'Enterprise in-house AI'},
+                {value:'Other',label:'Other:'}],
+               otherField:{name:'q_info_12_other',placeholder:'Please specify...'}}
+             ]},
+            {type:'likert',id:'lp',varPrefix:'lp',sectionLabel:'PART III',title:'LOGISTIC PERFORMANCE (LP)',subtitle:'Rate from 1 – Strongly Disagree to 5 – Strongly Agree',scale:5,
+             leftLabel:'Strongly<br>Disagree',rightLabel:'Strongly<br>Agree',
+             questions:[
+              'The logistics system ensures delivery within the committed time.',
+              'The rate of accurately processed orders (correct quantity and correct products) is high.',
+              'The logistics system can respond quickly to changes in customer demand.',
+              'Logistics operations are carried out with optimized costs relative to the achieved efficiency.',
+              'The system enables real-time tracking and transparency of transportation information.',
+              'Logistics services effectively meet customer expectations regarding reliability and consistency.',
+              'Overall, logistics operations contribute to improving the organization\'s business performance.']},
+            {type:'likert',id:'res',varPrefix:'res',sectionLabel:'PART IV',title:'RESILIENCE PERFORMANCE (RES)',subtitle:'Rate from 1 – Strongly Disagree to 5 – Strongly Agree',scale:5,
+             leftLabel:'Strongly<br>Disagree',rightLabel:'Strongly<br>Agree',
+             questions:[
+              'When AI provides incorrect or inappropriate outputs, I can quickly adjust my way of working to continue performing tasks effectively.',
+              'When AI tools change their behavior, interface, or response quality, I can adapt without significantly disrupting my work.',
+              'Even when AI creates misunderstandings or omits information, I can still maintain effective collaboration by checking, clarifying, and correcting the outputs.',
+              'I can flexibly switch between AI assistance and my own judgment when situations require it.',
+              'After negative experiences with AI, I can regain an appropriate way of using it rather than abandoning it or relying on it blindly.',
+              'Working with AI helps me learn from disruptions and improve my collaboration approach in future tasks.']},
+            {type:'likert',id:'ep',varPrefix:'ep',sectionLabel:'PART V',title:'ENVIRONMENTAL PERFORMANCE (EP)',subtitle:'Rate from 1 – Strongly Disagree to 5 – Strongly Agree',scale:5,
+             leftLabel:'Strongly<br>Disagree',rightLabel:'Strongly<br>Agree',
+             questions:[
+              'Human–AI collaboration helps our organization identify environmental risks and make data-driven green decisions.',
+              'AI tools in our organization provide real-time feedback that helps reduce energy consumption and environmental impact in the workplace.',
+              'Human–AI collaboration helps our organization comply more effectively with environmental regulations and sustainability requirements.',
+              'Organizational leaders use AI tools to establish and monitor environmental protection and regulatory compliance goals.',
+              'Our organization proactively uses AI combined with human oversight to monitor and reduce energy consumption and waste generation.',
+              'Human–AI collaboration has helped our organization develop innovative green solutions and improve environmentally sustainable practices.']},
+            {type:'likert',id:'sp',varPrefix:'sp',sectionLabel:'PART VI',title:'SUSTAINABILITY PERFORMANCE (SP)',subtitle:'Rate from 1 – Strongly Disagree to 5 – Strongly Agree',scale:5,
+             leftLabel:'Strongly<br>Disagree',rightLabel:'Strongly<br>Agree',
+             questions:[
+              'Our organization has reduced negative environmental impacts through energy savings, resource efficiency, and waste reduction in operations.',
+              'Our organization has improved the effectiveness of complying with and managing environmental-related requirements.',
+              'Our organization has enhanced employee well-being, working conditions, and workforce development.',
+              'Our organization creates greater positive value for customers, communities, and other stakeholders.',
+              'Pursuing sustainable development has helped our organization improve cost efficiency and overall operational performance.',
+              'Sustainable practices have contributed to improving our organization\'s long-term competitiveness and business performance.']}
+        ]
+    };
+    </script>
+    <script src="survey-engine.js"></script>
+    <style>
+      .se-banner{height:auto!important;object-fit:contain!important;}
+      .se-header{background:#fff!important;}
+      .se-header-content{background:#fff!important;margin-top:0!important;position:static!important;}
+      .se-header h1{color:var(--primary)!important;}
+      .se-header .se-subtitle{color:var(--text)!important;}
+    </style>
+</head>
+<body></body>
+</html>
