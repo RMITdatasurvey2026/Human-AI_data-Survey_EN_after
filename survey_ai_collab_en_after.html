@@ -46,7 +46,7 @@
  //       },
         
         sections: [
-            {type:'demographics',id:'info',sectionLabel:'PART II',title:'BASIC INFORMATION',
+            {type:'demographics',id:'info',sectionLabel:'PART I',title:'BASIC INFORMATION',
              questions:[
               {id:'q_info_1',required:true,text:'What is your gender?',type:'radio',layout:3,
                options:[{value:'Male',label:'Male'},{value:'Female',label:'Female'},{value:'Other',label:'Other'}]},
@@ -81,6 +81,7 @@
                 {value:'50 - 249 employees',label:'50 – 249 employees'},
                 {value:'250 - 999 employees',label:'250 – 999 employees'},
                 {value:'1000+ employees',label:'1000+ employees'}]},
+                 /*
               {id:'q_info_6',required:true,text:'How much annual revenue does your business have?',type:'radio',layout:2,
                options:[
                 {value:'Less than 3 billion VND',label:'Less than 3 billion VND'},
@@ -129,7 +130,8 @@
                 {value:'Other',label:'Other:'}],
                otherField:{name:'q_info_12_other',placeholder:'Please specify...'}}
              ]},
-            {type:'likert',id:'lp',varPrefix:'lp',sectionLabel:'PART III',title:'LOGISTIC PERFORMANCE',subtitle:'Rate from 1 – Strongly Disagree to 5 – Strongly Agree',scale:5,
+             */
+            {type:'likert',id:'lp',varPrefix:'lp',sectionLabel:'PART II',title:'LOGISTIC PERFORMANCE',subtitle:'Rate from 1 – Strongly Disagree to 5 – Strongly Agree',scale:5,
              leftLabel:'Strongly<br>Disagree',rightLabel:'Strongly<br>Agree',
              questions:[
               'The logistics system ensures delivery within the committed time.',
