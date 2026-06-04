@@ -50,7 +50,8 @@
              questions:[
               {id:'q_info_1',required:true,text:'What is your gender?',type:'radio',layout:3,
                options:[{value:'Male',label:'Male'},{value:'Female',label:'Female'},{value:'Other',label:'Other'}]},
-              {id:'q_info_2',required:true,text:'What is your age?',type:'number',min:18,step:1,placeholder:'e.g. 25 (minimum 18)'},
+             <!-- {id:'q_info_2',required:true,text:'What is your age?',type:'number',min:18,step:1,placeholder:'e.g. 25 (minimum 18)'},-->
+              {id:'q_info_2',required: true,text: 'What is your birth year?',type: 'number',max: 2008, // Điều kiện: Phải từ 18 tuổi trở lên (2026 - 18)step: 1,placeholder: 'e.g. 1995 (YYYY)'},
               {id:'q_info_3',required:true,text:'What is your current position in the organization?',type:'radio',layout:3,
                options:[
                 {value:'Chief Executive Officer (CEO)',label:'Chief Executive Officer (CEO)'},
